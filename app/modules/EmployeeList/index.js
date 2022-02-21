@@ -9,12 +9,12 @@ const EmployeeList = ({ className }) => {
 
     const [pageCount, setPageCount] = useState(10)
 
-    const filteredk = useSelector(selectFilteredEmployeeList());
+    const filterData = useSelector(selectFilteredEmployeeList());
 
     const getMoreData = () => {
-        if (filteredk.length < pageCount) {
+        if (filterData.length < pageCount) {
             setTimeout(() => {
-                setPageCount(filteredk.length)
+                setPageCount(filterData.length)
             }, 500)
         } else {
             setTimeout(() => {
@@ -31,11 +31,11 @@ const EmployeeList = ({ className }) => {
                         dataLength={pageCount}
                         next={getMoreData}
                         hasMore={true}
-                        loader={filteredk.length > pageCount && <h4>Loading...</h4>}
+                        loader={filterData.length > pageCount && <h4>Loading...</h4>}
                     >
-                        {filteredk.length > 0 ? <List sx={{ width: '100%', bgcolor: 'background.paper' }} className={styles.List}>
+                        {filterData.length > 0 ? <List sx={{ width: '100%', bgcolor: 'background.paper' }} className={styles.List}>
 
-                            {filteredk.map((list, index) => {
+                            {filterData.map((list, index) => {
                                 if (index < pageCount) {
                                     return <div key={`d-${index}`}>
                                         <ListItem className={styles.ListItem} alignItems="flex-start">
