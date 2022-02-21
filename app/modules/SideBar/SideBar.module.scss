@@ -1,0 +1,70 @@
+.SideBarWrapper {
+  background-color: white;
+  width: 100%;
+  padding-right: 10px;
+  border-bottom: none;
+  @media screen and(max-width:768px) {
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+.SideBar {
+  padding-inline: 24px;
+  background: white;
+  height: calc(100vh - 24px);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and(max-width:768px) {
+    height: 220px;
+  }
+}
+
+.SideBarDropdown {
+  div {
+    padding: 10px !important;
+  }
+  input {
+    top: -5px !important;
+  }
+  button {
+    margin-top: -3px;
+  }
+  @media screen and(max-width:768px) {
+    margin-top: 24px;
+  }
+}
+
+.Label {
+  margin-top: -6px;
+  @media screen and(max-width:768px) {
+    margin-top: 18px;
+  }
+}
+
+.Input {
+  margin-bottom: 24px;
+  width: 100%;
+
+  label {
+    top: -6px;
+  }
+
+  input {
+    padding: 10px;
+  }
+  @media screen and(max-width:768px) {
+    margin-bottom: 0px;
+  }
+}
+
+.Button {
+  margin-top: 24px;
+  width: 100%;
+}

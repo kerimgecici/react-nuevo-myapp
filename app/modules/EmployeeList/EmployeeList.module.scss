@@ -1,0 +1,39 @@
+.EmployeeListWrapper {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 1px;
+  @media screen and(max-width:768px) {
+    padding-left: 0;
+  }
+}
+.EmployeeList {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: none;
+  height: auto;
+  min-height: calc(100vh - 134px);
+  background-color: white;
+  padding: 24px;
+  @media screen and(max-width:1200px) {
+    min-height: calc(100vh - 194px);
+  }
+  @media screen and(max-width:768px) {
+    min-height: calc(100vh - 495px);
+  }
+}
+
+.ListItem {
+  position: static;
+}
+
+.Avatar {
+  position: static;
+}
+.List {
+  position: static;
+}
+
+.JobDescription {
+  display: block;
+  color: #212529;
+  font-weight: 600;
+}

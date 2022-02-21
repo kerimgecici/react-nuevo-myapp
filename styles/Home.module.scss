@@ -1,0 +1,64 @@
+.container {
+  padding: 0 2rem;
+}
+
+.HomePage {
+  position: relative;
+  background-color: #fff;
+  display: grid;
+  grid-gap: 0px 10px;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: auto 1fr;
+  grid-row-start: auto;
+  grid-template-areas:
+    "SideBar TopBar"
+    "SideBar EmployeeList";
+  .SideBar {
+    position: fixed;
+    top: 24px;
+    width: 345px;
+    grid-area: SideBar;
+    @media screen and (max-width: 1400px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 333px;
+    }
+    @media screen and (max-width: 992px) {
+      width: calc(33% + 10px);
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      position: sticky;
+      top: 264px;
+    }
+  }
+  .TopBar {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    grid-area: TopBar;
+    padding-left: 15px;
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+    }
+  }
+  .EmployeeList {
+    grid-row-start: 1;
+    grid-area: EmployeeList;
+  }
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 4fr 8fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
+    grid-gap: 0px 0px;
+    grid-template-areas:
+      "TopBar"
+      "SideBar"
+      "EmployeeList";
+  }
+}

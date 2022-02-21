@@ -1,0 +1,55 @@
+.TopBarWrapper {
+  height: 134px;
+  padding-top: 24px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  @media screen and(max-width:1200px) {
+    height: 194px;
+  }
+  @media screen and(max-width:768px) {
+    padding-left: 0;
+    border-bottom: none;
+    height: 264px;
+  }
+}
+.TopBar {
+  padding: 24px;
+  height: 100px;
+  padding-top: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 24px;
+  background-color: white;
+  z-index: 999;
+  @media screen and(max-width:1200px) {
+    height: 160px;
+  }
+  @media screen and(max-width:768px) {
+    height: 230px;
+  }
+}
+
+.CompanyDropdown {
+  div {
+    padding: 3px !important;
+  }
+  label {
+    margin-top: -3px;
+    margin-left: 4px;
+  }
+  button {
+    margin-top: -3px;
+  }
+  @media screen and(max-width:768px) {
+    margin-top: 24px;
+  }
+}
+
+.SearchButton {
+  button {
+    width: 200px;
+  }
+  margin-top: 6px;
+  @media screen and(max-width:1200px) {
+    margin-top: 24px;
+  }
+}
